@@ -4,23 +4,23 @@
 
 extern struct node *inicio;
 
-void show(){
+void show_content(){
     struct node *aux;
     aux = inicio;
     if(inicio == (struct node *)NULL)
         printf("Lista vazia!");
     while(aux != (struct node *)NULL){
-        printf("%d ");
+        printf("%d ", aux->data);
         aux = aux->next;
     }
     printf("\n");
 }
 
-void show(struct node *aux){
+void show_content(struct node *aux){
     if(aux == (struct node *)NULL)
         printf("Lista vazia!");
     while(aux != (struct node *)NULL){
-        printf("%d ");
+        printf("%d ", aux->data);
         aux = aux->next;
     }
     printf("\n");
