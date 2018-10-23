@@ -6,9 +6,10 @@ struct node {
 };
 
 void show_content();
-void show_content_2(struct node *aux);
-void show_content_debug();
-void show_content_debug_2(struct node *aux);
+void show_content(struct node *aux);
+
+void debug();
+void debug(struct node *aux);
 
 void cria_lista();
-void cria_lista_2(struct node **inicio);
+void cria_lista(struct node **inicio);

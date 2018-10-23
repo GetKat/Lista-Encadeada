@@ -29,7 +29,7 @@ void cria_lista(){
     aux = (struct node *)NULL;
 }
 
-void cria_lista_2(struct node **inicio){
+void cria_lista(struct node **inicio){
     struct node *aux;
     int data;
     scanf("%d", &data);

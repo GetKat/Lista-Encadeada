@@ -16,7 +16,7 @@ void show_content(){
     printf("\n");
 }
 
-void show_content_2(struct node *aux){
+void show_content(struct node *aux){
     if(aux == (struct node *)NULL)
         printf("Lista vazia!"); 
     while(aux != (struct node *)NULL){
@@ -26,7 +26,7 @@ void show_content_2(struct node *aux){
     printf("\n");
 }
 
-void show_content_debug(){
+void debug(){
     struct node *aux, *last = (struct node *)NULL;
     printf("Lista direta:\n");
     if(inicio == (struct node *)NULL)
@@ -46,7 +46,7 @@ void show_content_debug(){
     printf("\n");
 }
 
-void show_content_debug_2(struct node *aux){
+void debug(struct node *aux){
     struct node *last = (struct node *)NULL;
     printf("Lista direta:\n");
     if(aux == (struct node *)NULL)
