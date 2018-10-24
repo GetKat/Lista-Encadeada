@@ -14,7 +14,7 @@ void cria_lista(void){
     if(data >= 0){
         aux = (struct node *)malloc(sizeof(struct node));
         aux->data = data;
-        aux->next = inicio;
+        aux->next = aux;
         inicio = aux;
         scanf("%d", &data);
         while(data >= 0){
