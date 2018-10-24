@@ -14,52 +14,50 @@ L.S.E.C.D - Lista Simplesmente Encadeada Circular com Descritor
 
 L.D.E.C.D - Lista Duplamente Encadeada Circular com Descritor
 
-This folder is designated to the solution of the following problems:
+1) Geração de uma lista onde os elementos serão inseridos na ordem inversa em que forem obtidos 
 
-1) Geração de uma L.S.E. onde os elementos serão inseridos na ordem inversa em que forem obtidos 
+2) Geração de uma lista onde os elementos serão inseridos na ordem inversa em que forem obtidos em recursão
 
-2) Geração de uma L.S.E. onde os elementos serão inseridos na ordem inversa em que forem obtidos em recursão
+3) Mostrar o conteúdo da lista na tela
 
-3) Mostrar o conteúdo da L.S.E. na tela
+4) Mostrar o conteúdo da lista na tela em recursão
 
-4) Mostrar o conteúdo da L.S.E. na tela em recursão
+5) Contar o numero de elementos da lista
 
-5) Contar o numero de elementos da L.S.E.
+6) Contar o numero de elementos da lista em recursão
 
-6) Contar o numero de elementos da L.S.E. em recursão
+7) Média dos elementos da lista
 
-7) Média dos elementos da L.S.E.
+8) Maior ou menor elemento da lista em recursão 
 
-8) Média dos elementos da L.S.E. em recursão
+9) Inserir um elemento ao final de uma lista 
 
-9) Maior ou menor elemento da L.S.E. 
+10) Inserir um elemento ao final de uma lista em recursão 
 
-10) Maior ou menor elemento da L.S.E. em recursão 
+11) Inserir um elemento na lista mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) 
 
-11) Inserir um elemento ao final de uma L.S.E. 
+12) Inserir um elemento na lista mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) em recursão 
 
-12) Inserir um elemento ao final de uma L.S.E. em recursão 
+13) Criar uma lista em ordem crescente 
 
-13) Inserir um elemento na L.S.E. mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) 
+14) Criar uma lista em ordem crescente em recursão 
 
-14) Inserir um elemento na L.S.E. mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) em recursão 
+15) Remover um elemento da lista 
 
-15) Criar uma L.S.E. em ordem crescente 
+16) Remover um elemento da lista em recursão 
 
-16) Criar uma L.S.E. em ordem crescente em recursão 
+17) Criação de uma lista na ordem em que os elementos foram inseridos 
 
-17) Remover um elemento da L.S.E. 
+18) Criação de uma lista na ordem em que os elementos foram inseridos em recursão 
 
-18) Remover um elemento da L.S.E. em recursão 
+19) Apagar a lista da memória 
 
-19) Criação de uma L.S.E. na ordem em que os elementos foram inseridos 
+20) Apagar a lista da memória em recursão 
 
-20) Criação de uma L.S.E. na ordem em que os elementos foram inseridos em recursão 
+21) Ordenar uma lista
 
-21) Apagar a L.S.E. da memória 
+22) Ordenar uma lista em recursão
 
-22) Apagar a L.S.E. da memória em recursão 
+23) Criar duas lista em qualquer ordem e em seguida juntar as duas em uma só lista em ordem crescente 
 
-23) Criar duas L.S.E. em qualquer ordem e em seguida juntar as duas em uma só L.S.E. em ordem crescente 
-
-24) Criar duas L.S.E. em qualquer ordem e em seguida juntar as duas em uma só L.S.E. em ordem crescente com recursão 
+24) Criar duas lista em qualquer ordem e em seguida juntar as duas em uma só lista em ordem crescente com recursão 
