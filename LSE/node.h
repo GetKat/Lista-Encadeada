@@ -4,9 +4,6 @@ struct node {
     struct node *next;
 };
 
-void cria_descritor(void);
-void cria_descritor(struct node **inicio);
-
 void show_content(void);
 void show_content(struct node *inicio);
 

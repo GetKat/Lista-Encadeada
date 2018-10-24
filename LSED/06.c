@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include "node.h"
 
-int count_rec();
+int count_elements_rec();
 
 struct desc *lista;
 
 int main(){
     cria_lista();
-    printf("%d elementos\n", count_rec());
+    printf("%d elementos\n", count_elements_rec());
 }
 
 int count_rec(){

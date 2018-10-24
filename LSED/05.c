@@ -2,15 +2,15 @@
 #include <stdlib.h>
 #include "node.h"
 
-int count();
+int count_elements();
 
 struct desc *lista;
 
 int main(){
     cria_lista();
-    printf("%d elementos\n", count());
+    printf("%d elementos\n", count_elements());
 }
 
-int count(){
+int count_elements(){
     return lista->count;
 }
