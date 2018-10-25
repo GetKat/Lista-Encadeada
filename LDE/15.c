@@ -9,9 +9,9 @@ struct node *inicio;
 int main(){
     int data = 5;
     cria_lista();
-    show_content_debug();
+    debug();
     deletar_elemento(data);
-    show_content_debug();
+    debug();
 }
 
 void deletar_elemento(int data){

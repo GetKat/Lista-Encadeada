@@ -8,9 +8,9 @@ struct node *inicio;
 
 int main(){
     cria_lista();
-    show_content_debug();
+    debug();
     deletar_lista();
-    show_content_debug();
+    debug();
 }
 
 void deletar_lista(){

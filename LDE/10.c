@@ -8,9 +8,9 @@ struct node *inicio;
 
 int main(){
     cria_lista();
-    show_content_debug();
+    debug();
     inserir_fim_rec(10, inicio);
-    show_content_debug();
+    debug();
 }
 
 void inserir_fim_rec(int data, struct node *aux){

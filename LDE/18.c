@@ -8,7 +8,7 @@ struct node *inicio;
 
 int main(){
     cria_lista_rec((struct node *)NULL);
-    show_content_debug();
+    debug();
 }
 
 void cria_lista_rec(struct node *aux){

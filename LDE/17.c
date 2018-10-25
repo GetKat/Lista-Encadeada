@@ -8,7 +8,7 @@ struct node *inicio;
 
 int main(){
     cria_lista();
-    show_content_debug();
+    debug();
 }
 
 void cria_lista(){
