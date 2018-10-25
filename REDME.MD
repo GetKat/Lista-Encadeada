@@ -28,15 +28,15 @@ L.D.E.C.D - Lista Duplamente Encadeada Circular com Descritor
 
 7) Média dos elementos da lista
 
-8) Maior ou menor elemento da lista em recursão 
+8) Média dos elementos da lista em recursão
 
 9) Inserir um elemento ao final de uma lista 
 
 10) Inserir um elemento ao final de uma lista em recursão 
 
-11) Inserir um elemento na lista mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) 
+11) Inserir um elemento na lista mantendo a mesma ordenada (supor que a lista está em ordem crescente) 
 
-12) Inserir um elemento na lista mantendo a mesma ordenada (supor que a L.S.E está em ordem crescente) em recursão 
+12) Inserir um elemento na lista mantendo a mesma ordenada (supor que a lista está em ordem crescente) em recursão 
 
 13) Criar uma lista em ordem crescente 
 
