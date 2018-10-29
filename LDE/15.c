@@ -22,12 +22,18 @@ void deletar_elemento(int data){
     }
     //elemento a ser deletado esta no inicio
     else if(inicio->data == data){
-        aux = inicio;
-        inicio = inicio->next;
-        inicio->prev = (struct node *)NULL;
-        aux->next = (struct node *)NULL;
-        free(aux);
-        aux = (struct node *)NULL;
+        if(inicio->next == (struct node *)NULL){
+            free(inicio);
+            inicio = (struct node *)NULL;
+        }
+        else{
+            aux = inicio;
+            inicio = inicio->next;
+            inicio->prev = (struct node *)NULL;
+            aux->next = (struct node *)NULL;
+            free(aux);
+            aux = (struct node *)NULL;
+        }
     }
     else{
         aux = inicio;

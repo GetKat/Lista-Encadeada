@@ -11,28 +11,16 @@ struct node *inicio;
 
 int main(){
     cria_lista();
-    show_content_debug();
+    debug();
     inserir_ordenado_hard(1);
-    show_content_debug();
+    debug();
     inserir_ordenado_hard(3);
-    show_content_debug();
+    debug();
     inserir_ordenado_hard(1);
-    show_content_debug();
+    debug();
     inserir_ordenado_hard(1);
-    show_content_debug();
+    debug();
 }
-
-void debug(struct node *aux){
-    while(aux != (struct node *)NULL){
-        printf("endereco: %p\n", aux);
-        printf("Data: %d\n", aux->data);
-        printf("Prev: %p\n", aux->prev);
-        printf("next: %p\n", aux->next);
-        printf("\n\n");
-        aux = aux->next;
-    }
-}
-
 //OK!
 void inserir_ordenado(int data){
     struct node *aux, *prev;
