@@ -2,64 +2,111 @@
 #include <stdlib.h>
 #include "node.h"
 
-void merge_sort(struct node **aux);
-void split(struct node *inicio, struct node **primeira, struct node **segunda);
-struct node *merge(struct node *first, struct node *second);
+void ordenar_rec(struct node *hold, struct node *aux, struct node *it);
+void deletar_lista(struct node **inicio);
 
 struct node *inicio;
 
 int main(){
     cria_lista();
     show_content();
-    merge_sort(&inicio);
+    ordenar_rec((struct node *)NULL, inicio, (struct node *)NULL);
     show_content();
 }
 
-void merge_sort(struct node **aux){
-    struct node *lista1, *lista2, *head;
-    head = *aux;
-    if(head != (struct node *)NULL && head->next != (struct node *)NULL){
-        split(head, &lista1, &lista2);
-        merge_sort(&lista1);
-        merge_sort(&lista2);
-
-        *aux = merge(lista1, lista2);
+void deletar_lista(struct node **inicio){
+    struct node *aux;
+    while((*inicio) != (struct node *)NULL){
+        aux = (*inicio);
+        (*inicio) = (*inicio)->next;
+        aux->next = (struct node *)NULL;
+        free(aux);
+        aux = (struct node *)NULL;
     }
 }
 
-struct node *merge(struct node *first, struct node *second){
-    struct node *result;
-    result = (struct node *)NULL;
-    if(first == (struct node *)NULL)
-        return second;
-    if(second == (struct node *)NULL)
-        return first;
-    if(first->data <= second->data){
-        result = first;
-        result->next = merge(first->next, second);
+void inserir_ordenado(int data){
+    struct node *aux, *prev;
+    if(inicio == (struct node *)NULL){
+        inicio = (struct node *)malloc(sizeof(struct node));
+        inicio->data = data;
+        inicio->next = (struct node *)NULL;
+    }
+    else if(inicio->data > data){
+        aux = (struct node *)malloc(sizeof(struct node));
+        aux->data = data;
+        aux->next = inicio;
+        inicio = aux;
     }
     else{
-        result = second;
-        result->next = merge(first, second->next);
-    }
-    return result;
-}
-
-void split(struct node *inicio, struct node **primeira, struct node **segunda){
-    struct node *fast, *slow;
-    slow = inicio;
-    fast = inicio->next;
-
-    while(fast != (struct node *)NULL){
-        fast = fast->next;
-        if(fast != (struct node *)NULL){
-            slow = slow->next;
-            fast = fast->next;
+        aux = inicio;
+        while(aux->next != (struct node *)NULL && aux->data <= data){
+            prev = aux;
+            aux = aux->next;
+        }
+        //inserir no final
+        if(aux->data < data){
+            aux->next = (struct node *)malloc(sizeof(struct node));
+            aux = aux->next;
+            aux->data = data;
+            aux->next = (struct node *)NULL;
+        }
+        //inserir entre aux e prev
+        else{
+            prev->next = (struct node *)malloc(sizeof(struct node));
+            prev = prev->next;
+            prev->data = data;
+            prev->next = aux;
         }
     }
+    aux = (struct node *)NULL;
+    aux = prev;
+}
 
-    *primeira = inicio;
-    *segunda = slow->next;
-    slow->next = (struct node *)NULL;
-    slow = (struct node *)NULL;
+void inserir_fim(struct node **inicio, int data){
+    struct node *aux;
+    if(*inicio == (struct node *)NULL){
+        aux = (struct node *)malloc(sizeof(struct node));
+        aux->data = data;
+        aux->next = (struct node *)NULL;
+        *inicio = aux;
+    }
+    else{
+        aux = *inicio;
+        while(aux->next != (struct node *)NULL)
+            aux = aux->next;
+        aux->next = (struct node *)malloc(sizeof(struct node));
+        aux = aux->next;
+        aux->data = data;
+        aux->next = (struct node *)NULL;
+    }
+    aux = (struct node *)NULL;
+}
+
+void ordenar_rec(struct node *hold, struct node *aux, struct node *it){
+    if(aux != (struct node *)NULL){
+        inserir_fim(&hold, aux->data);
+        aux = aux->next;
+        ordenar_rec(hold, aux, it);
+    }
+    else{
+        if(it == (struct node *)NULL){
+            deletar_lista(&inicio);
+            it = hold;
+            ordenar_rec(hold, aux, it);
+        }
+        else{        
+            if(it->next != (struct node *)NULL){
+                inserir_ordenado(it->data);
+                it = it->next;
+                ordenar_rec(hold, aux, it);
+            }
+            else{
+                inserir_ordenado(it->data);
+                deletar_lista(&hold);
+                aux = (struct node *)NULL;
+                hold = aux;
+            }
+        }
+    }
 }
