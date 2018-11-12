@@ -16,6 +16,8 @@ int main(){
 }
 
 void unir_ordenado_rec(){
+    //criando a lista, caso a e b estajam os dois vazios
+    inicio = (struct node *)NULL;
     unir(a);
     unir(b);
 }
